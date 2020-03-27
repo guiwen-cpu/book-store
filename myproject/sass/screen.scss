@@ -1,0 +1,997 @@
+        /* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+        
+        @import "compass/reset";
+        @import "compass/css3";
+        $per:100%;
+        $olwidth:203px;
+        @mixin cover ($width:100%, $height:100%) {
+            width: $width;
+            height: $height;
+            vertical-align: middle;
+        }
+        
+        @mixin covers ($width:100%, $height:100%) {
+            max-width: $width;
+            max-height: $height;
+        }
+        
+        body {
+            background: rgba(207, 212, 185, 0.3)
+        }
+        
+        p {
+            display: block;
+        }
+        
+        .top-middle {
+            input {
+                text-indent: 10px;
+                color: #666;
+            }
+        }
+        
+        .banner {
+            width: 1863px;
+            height: 380px;
+            margin-left: -332px;
+            position: relative;
+            #pic {
+                width: $per;
+                height: $per;
+                li {
+                    width: $per;
+                    height: $per;
+                    position: absolute;
+                    left: 0px;
+                    top: 0;
+                    a {
+                        width: $per;
+                        height: $per;
+                        img {
+                            width: $per;
+                            height: $per;
+                        }
+                    }
+                }
+            }
+            .point {
+                position: absolute;
+                text-align: center;
+                line-height: 23px;
+                width: $olwidth;
+                left: 50%;
+                margin-left: -$olwidth/2;
+                bottom: 10px;
+                border-radius: 5px;
+                height: 23px;
+                background: rgba(0, 0, 0, 0.2);
+                li {
+                    width: 15px;
+                    height: 15px;
+                    margin-left: 5px;
+                    border-radius: 50%;
+                    border: 1px solid #eee;
+                    color: #999;
+                    background: white;
+                    font: 12px/15px Arial;
+                    // text-align: center;
+                    margin-top: 3px;
+                    // display: block;
+                    float: left;
+                }
+                .current {
+                    background: rgb(187, 53, 53);
+                    color: white;
+                }
+            }
+        }
+        
+        .book-list {
+            position: absolute;
+            width: 192px;
+            height: 490px;
+            display: block;
+            background: rgba(41, 120, 247, 0.6);
+            border: 0px solid rgb(246, 246, 246);
+            z-index: 1;
+            ul {
+                @include cover(100%, 100%);
+                // list-style: none;
+                li {
+                    box-sizing: border-box;
+                    position: relative;
+                    width: 100%;
+                    border-bottom: 1px dashed white;
+                    padding: 10px 0 10px 10px;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font: 14px/25px Arial;
+                        // line-height: 20px;
+                        margin: 0 3px 3px 0;
+                        display: inline-block;
+                    }
+                    h3 {
+                        color: white;
+                        margin-bottom: 5px;
+                    }
+                    &:hover div {
+                        display: block;
+                    }
+                    .live {
+                        top: -110px;
+                        transform: translateY(0);
+                    }
+                    .kexue {
+                        top: -100px;
+                        transform: translateY(0);
+                    }
+                    div {
+                        box-shadow: 5px 5px 5px rgba(99, 98, 98, 0.219);
+                        background: white;
+                        display: none;
+                        position: absolute;
+                        min-width: 900px;
+                        padding: 5px 20px;
+                        left: 100%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        #end1 {
+                            top: 120px;
+                            transform: translateY(0);
+                        }
+                        #end2 {
+                            top: 130px;
+                            transform: translateY(0);
+                        }
+                        .flow {
+                            width: 0px;
+                            height: 0px;
+                            border-left: 20px solid #C62E2D;
+                            border-top: 15px solid transparent;
+                            border-bottom: 15px solid transparent;
+                            // border-right: medium none;
+                            padding: 0;
+                            position: absolute;
+                            left: 0px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            box-shadow: none;
+                        }
+                        ul {
+                            li {
+                                height: 40px;
+                                border-bottom: 1px solid #ddd;
+                                text-decoration: none;
+                                .blod {
+                                    font-weight: bold;
+                                    font-size: 14px;
+                                    color: #666;
+                                    padding: 0 40px 0 15px;
+                                }
+                                a {
+                                    text-align: center;
+                                    padding: 0 15px;
+                                    display: block;
+                                    float: left;
+                                    font: 14px/20px Arial;
+                                    height: 20px;
+                                    color: #999;
+                                    margin: 0;
+                                    border-right: 1px solid #ddd;
+                                    &:hover {
+                                        color: #C62E2D;
+                                    }
+                                }
+                            }
+                            .nonesty {
+                                border-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .eve-row {
+            .eve-col-cu {
+                width: 1000px;
+                margin-left: 190px;
+                margin-top: 25px;
+                height: 140px;
+                ul {
+                    @include cover(105%, 100%);
+                    li {
+                        width: 200px;
+                        height: 140px;
+                        margin-left: 10px;
+                        float: left;
+                        &:hover {
+                            box-shadow: 0 0 13px rgba(153, 153, 153, 0.607);
+                            transform: rotateZ(3deg);
+                        }
+                        a {
+                            width: 100px;
+                            height: 100px;
+                            img {
+                                @include cover();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .row2 {
+            width: 1200px;
+            height: 416px;
+            margin-top: 60px;
+            div {
+                float: left;
+                // display: inline-block;
+                // vertical-align: top;
+                // zoom: 1;
+                // min-height: 10px;
+                // text-align: left;
+                // margin-left: 0px;
+                // white-space: normal;
+            }
+            .Bestsell {
+                background: white;
+                @include cover(366px, 416px);
+                float: left;
+                .Bestsell-title {
+                    @include cover(366px, 58px);
+                    img {
+                        @include cover(100%, 100%)
+                    }
+                }
+                .Bestsell-list {
+                    @include cover(298px, 30px);
+                    padding-left: 16px;
+                    border-bottom: 2px solid #f0f0f0;
+                    li {
+                        font-size: 15px;
+                        color: rgb(107, 107, 107);
+                        padding: 0 4px;
+                        text-align: center;
+                        font-weight: 700;
+                        cursor: default;
+                        @include cover(72px, 30px);
+                        float: left;
+                        box-sizing: border-box;
+                        line-height: 30px;
+                    }
+                    .Bestsell-active {
+                        border-bottom: 2px solid #C62E2D;
+                        color: #1E1E1E;
+                    }
+                }
+            }
+        }
+        
+        .ranking-body {
+            @include cover(298px, 344px);
+            margin-left: 25px;
+        }
+        
+        .Bestsell-ranking {
+            @include cover(282px, 294px);
+            margin: 0 auto;
+            ul {
+                width: 100%;
+                overflow: hidden;
+                max-height: 544px;
+                display: none;
+                li {
+                    height: 50px;
+                    width: 100%;
+                    padding-left: 32px;
+                    border-bottom: 1px dashed #dfdfdf;
+                    position: relative;
+                    .back1 {
+                        background: url(../img/row2/tap.png) no-repeat;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 21px;
+                        height: 22px;
+                        background-size: 100% 100%;
+                        color: #fff;
+                        text-align: center;
+                    }
+                    .back2 {
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -11px;
+                        left: 0;
+                        width: 21px;
+                        height: 22px;
+                        background-size: 100% 100%;
+                        color: #666;
+                        text-align: center;
+                    }
+                    .simple {
+                        position: absolute;
+                        height: 18px;
+                        line-height: 18px;
+                        top: 10px;
+                        width: calc(100% - 32px);
+                        margin: 0;
+                        color: #666;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        cursor: default;
+                        font-size: 13px;
+                        font-weight: bold;
+                    }
+                    .detail {
+                        display: none;
+                        .ranking-pic {
+                            position: absolute;
+                            top: 29px;
+                            left: 26px;
+                            width: 62px;
+                            height: 72px;
+                            text-align: center;
+                            line-height: 72px;
+                            display: inline-block;
+                            img {
+                                max-width: 100%;
+                                max-height: 100%;
+                                vertical-align: middle;
+                            }
+                        }
+                        .author {
+                            margin: 0;
+                            font-size: 12px;
+                            color: #999;
+                            height: 18px;
+                            line-height: 18px;
+                            position: absolute;
+                            bottom: 40px;
+                            left: 100px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            width: 180px;
+                        }
+                        .price {
+                            margin: 0;
+                            font-size: 20px;
+                            color: #C62E2D;
+                            height: 18px;
+                            line-height: 18px;
+                            position: absolute;
+                            bottom: 16px;
+                            left: 100px;
+                        }
+                    }
+                    // &:hover .detail {
+                    //     display: block;
+                    // }
+                }
+                .active {
+                    height: 94px;
+                    padding: 16px 0 0 32px;
+                    .detail {
+                        display: block;
+                    }
+                }
+            }
+            .active {
+                display: block;
+            }
+        }
+        
+        @mixin full() {
+            a {
+                @include cover();
+                img {
+                    @include cover()
+                }
+            }
+        }
+        
+        .selected {
+            @include cover(432px, 416px);
+            margin-left: 18px;
+            .select-title {
+                @include cover(100%, 58px);
+                a {
+                    @include cover();
+                    img {
+                        @include cover()
+                    }
+                }
+            }
+            .select-img1 {
+                @include cover(100%, 159px);
+                @include full;
+            }
+            .eve-row {
+                @include cover(100%, 199px);
+                .select-img2 {
+                    @include cover(216px, 100%);
+                    @include full;
+                }
+                .select-img3 {
+                    @include cover(216px, 100%);
+                    @include full();
+                }
+            }
+        }
+        
+        .coupon {
+            @include cover(366px, 416px);
+            margin-left: 18px;
+            .coupon-title {
+                @include cover(100%, 58px);
+                @include full()
+            }
+            .coupon-img1 {
+                @include cover(100%, 120px);
+                @include full();
+                &:hover {
+                    box-shadow: 0 0 13px rgba(153, 153, 153, 0.607);
+                    transform: skewX(2deg);
+                }
+            }
+            .coupon-img2 {
+                @include cover(100%, 120px);
+                @include full();
+                &:hover {
+                    box-shadow: 0 0 13px rgba(153, 153, 153, 0.607);
+                    transform: skewX(2deg);
+                }
+            }
+            .coupon-img3 {
+                @include cover(100%, 120px);
+                @include full();
+                &:hover {
+                    box-shadow: 0 0 13px rgba(153, 153, 153, 0.607);
+                    transform: skewX(2deg);
+                }
+            }
+        }
+        
+        .row3 {
+            width: 100%;
+            .dangzheng {
+                background: white;
+                margin-top: 30px;
+                @include cover(100%, 313px);
+                h2 {
+                    font-size: 18px;
+                    line-height: 26px;
+                    color: rgba(54, 54, 54, 0.836);
+                    padding: 20px 10px 8px;
+                    font-weight: bold;
+                    height: 32px;
+                }
+                ul {
+                    @include cover(100%, 259px);
+                    li {
+                        border: 1px solid transparent;
+                        &:hover {
+                            border: 1px solid red;
+                        }
+                        float: left;
+                        padding: 5px 19px 5px;
+                        @include cover(160px, 236px);
+                        a {
+                            @include cover();
+                            div {
+                                @include cover(100%, 160px);
+                                img {
+                                    max-width: 100%;
+                                    max-height: 100%;
+                                    vertical-align: middle;
+                                }
+                            }
+                            h3 {
+                                margin: 12px 0 0;
+                                height: 32px;
+                                font-size: 12px;
+                                line-height: 16px;
+                                color: #1E1E1E;
+                                font-weight: 400;
+                            }
+                            p {
+                                margin: 10px 0 0;
+                                height: 22px;
+                                line-height: 22px;
+                                color: #C62E2D;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .special-price {
+                @extend .dangzheng
+            }
+        }
+        
+        .daren {
+            margin-top: 60px;
+            width: 100%;
+            .daren-title {
+                @include cover(100%, 58px);
+                img {
+                    @include cover()
+                }
+            }
+            .darens {
+                @include cover(100%, 318px);
+                .daren1 {
+                    background: white;
+                    float: left;
+                    @include cover(388px, 100%);
+                    .daren1-top {
+                        position: relative;
+                        height: 150px;
+                        padding: 35px 25px 35px 118px;
+                        color: #84685E;
+                        background-image: url(../img/darenlingdu/8.webp);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        box-sizing: border-box;
+                        .img {
+                            @include cover(80px, 80px);
+                            top: 35px;
+                            left: 15px;
+                            border-radius: 50%;
+                            text-align: center;
+                            position: absolute;
+                            overflow: hidden;
+                            img {
+                                @include covers(100%, 100%);
+                            }
+                        }
+                    }
+                    .daren1-bottom {
+                        position: relative;
+                        height: 168px;
+                        padding: 12px 16px 12px 125px;
+                        color: #6e6e6e;
+                        .img {
+                            @include cover(80px, 80px);
+                            position: absolute;
+                            top: 14px;
+                            left: 16px;
+                            overflow: hidden;
+                            background-color: #fff;
+                            text-align: center;
+                            img {
+                                @include covers()
+                            }
+                        }
+                        .item-content {
+                            .book-name {
+                                font-size: 14px;
+                                line-height: 20px;
+                                height: 20px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            .author {
+                                margin: 4px 0;
+                                height: 18px;
+                                font-size: 12px;
+                                line-height: 18px;
+                            }
+                            .book-intro {
+                                height: 72px;
+                                margin-bottom: 8px;
+                                overflow: hidden;
+                                font-size: 12px;
+                                line-height: 18px;
+                            }
+                            .price {
+                                font-size: 14px;
+                                line-height: 20px;
+                                height: 20px;
+                                color: #C62E2D;
+                            }
+                        }
+                    }
+                }
+                .daren2 {
+                    background: white;
+                    float: left;
+                    margin-left: 18px;
+                    @include cover(388px, 100%);
+                    .daren2-top {
+                        position: relative;
+                        height: 150px;
+                        padding: 35px 25px 35px 118px;
+                        color: #84685E;
+                        background-image: url(../img/darenlingdu/9.webp);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        box-sizing: border-box;
+                        .img {
+                            @include cover(80px, 80px);
+                            top: 35px;
+                            left: 15px;
+                            border-radius: 50%;
+                            text-align: center;
+                            position: absolute;
+                            overflow: hidden;
+                            img {
+                                @include covers(100%, 100%);
+                            }
+                        }
+                    }
+                    .daren2-bottom {
+                        position: relative;
+                        height: 168px;
+                        padding: 12px 16px 12px 125px;
+                        color: #6e6e6e;
+                        .img {
+                            @include cover(80px, 80px);
+                            position: absolute;
+                            top: 14px;
+                            left: 16px;
+                            overflow: hidden;
+                            background-color: #fff;
+                            text-align: center;
+                            img {
+                                @include covers()
+                            }
+                        }
+                        .item-content {
+                            .book-name {
+                                font-size: 14px;
+                                line-height: 20px;
+                                height: 20px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            .author {
+                                margin: 4px 0;
+                                height: 18px;
+                                font-size: 12px;
+                                line-height: 18px;
+                            }
+                            .book-intro {
+                                height: 72px;
+                                margin-bottom: 8px;
+                                overflow: hidden;
+                                font-size: 12px;
+                                line-height: 18px;
+                            }
+                            .price {
+                                font-size: 14px;
+                                line-height: 20px;
+                                height: 20px;
+                                color: #C62E2D;
+                            }
+                        }
+                    }
+                }
+                .daren3 {
+                    background: white;
+                    float: left;
+                    margin-left: 18px;
+                    @include cover(388px, 100%);
+                    .daren3-top {
+                        position: relative;
+                        height: 150px;
+                        padding: 35px 25px 35px 118px;
+                        color: #84685E;
+                        background-image: url(../img/darenlingdu/10.webp);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        box-sizing: border-box;
+                        .img {
+                            @include cover(80px, 80px);
+                            top: 35px;
+                            left: 15px;
+                            border-radius: 50%;
+                            text-align: center;
+                            position: absolute;
+                            overflow: hidden;
+                            img {
+                                @include covers(100%, 100%);
+                            }
+                        }
+                    }
+                    .daren3-bottom {
+                        position: relative;
+                        height: 168px;
+                        padding: 12px 16px 12px 125px;
+                        color: #6e6e6e;
+                        .img {
+                            @include cover(80px, 80px);
+                            position: absolute;
+                            top: 14px;
+                            left: 16px;
+                            overflow: hidden;
+                            background-color: #fff;
+                            text-align: center;
+                            img {
+                                @include covers()
+                            }
+                        }
+                        .item-content {
+                            .book-name {
+                                font-size: 14px;
+                                line-height: 20px;
+                                height: 20px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            .author {
+                                margin: 4px 0;
+                                height: 18px;
+                                font-size: 12px;
+                                line-height: 18px;
+                            }
+                            .book-intro {
+                                height: 72px;
+                                margin-bottom: 8px;
+                                overflow: hidden;
+                                font-size: 12px;
+                                line-height: 18px;
+                            }
+                            .price {
+                                font-size: 14px;
+                                line-height: 20px;
+                                height: 20px;
+                                color: #C62E2D;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        footer {
+            height: 605px;
+            margin-top: 60px;
+            background: #dfdfdf;
+            .foot {
+                height: 100%;
+                .foot-top {
+                    height: 102px;
+                    border-bottom: 1px solid #666;
+                    ul {
+                        @include cover(1200px, 100%);
+                        margin: 0 auto;
+                        li {
+                            width: 300px;
+                            height: 100%;
+                            float: left;
+                            color: #666;
+                            font: bold 20px/102px 宋体;
+                            text-align: center
+                        }
+                    }
+                }
+                .foot-middle {
+                    height: 186px;
+                    border-bottom: 1px solid #666;
+                    ul {
+                        @include cover(1200px, 100%);
+                        margin: 0 auto;
+                        li {
+                            box-sizing: border-box;
+                            padding-top: 20px;
+                            float: left;
+                            @include cover(300px, 100%);
+                            text-align: center;
+                            span {
+                                font: bold 1em/20px 宋体;
+                                color: #666;
+                            }
+                            a {
+                                font: 13px/16px 宋体;
+                                display: block;
+                                margin: 10px;
+                                text-align: center;
+                                color: #999;
+                                &:hover {
+                                    color: #C62E2D
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .foot-bottom {
+            padding-top: 40px;
+            width: 1200px;
+            margin: 0 auto;
+            ul {
+                li {
+                    height: 20px;
+                    margin-bottom: 10px;
+                    width: 100%;
+                    font: 14px/20px Arial;
+                    text-decoration: none;
+                    text-align: center;
+                    a {
+                        text-decoration: none;
+                        color: #999;
+                        &:hover {
+                            color: #C62E2D
+                        }
+                    }
+                    span {
+                        color: #999;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+        
+        header {
+            background: rgba(238, 238, 238, 0.438);
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .top-nav {
+            width: 1200px;
+            margin: 0 auto;
+            height: 31px;
+            .nav-left {
+                float: left;
+                height: 100%;
+                span {
+                    color: #666;
+                    font: 14px/31px Arial;
+                }
+                a {
+                    text-decoration: none;
+                    color: blue;
+                    font: 14px/31px Arial;
+                    margin-left: 10px;
+                }
+            }
+            .nav-right {
+                float: right;
+                ul {
+                    .hover {
+                        &:hover {
+                            border: 1px solid #ddd;
+                            border-top: none;
+                            border-bottom: none;
+                            background: white;
+                        }
+                        &:hover .hovera {
+                            border-right: 1px solid transparent;
+                        }
+                    }
+                    li {
+                        height: 100%;
+                        float: left;
+                        margin-left: -2px;
+                        text-align: center;
+                        position: relative;
+                        border: 1px solid transparent;
+                        a {
+                            padding: 0 20px;
+                            border-right: 1px solid rgba(153, 153, 153, 0.685);
+                            text-decoration: none;
+                            font: 12px/31px Arial;
+                            color: black;
+                            &:hover {
+                                color: #C62E2D;
+                            }
+                        }
+                        &:hover ul {
+                            display: block;
+                        }
+                        .erweima {
+                            width: 100px;
+                            height: 100px;
+                            img {
+                                height: 100%;
+                            }
+                        }
+                        ul {
+                            background: white;
+                            position: absolute;
+                            border: 1px solid #ddd;
+                            border-top: none;
+                            display: none;
+                            width: 209%;
+                            top: 100%;
+                            left: -1px;
+                            li {
+                                height: 100%;
+                                float: left;
+                                a {
+                                    text-decoration: none;
+                                    padding: 0 20px;
+                                    border-right: 1px solid rgba(153, 153, 153, 0.685);
+                                    line-height: 31px;
+                                    &:hover {
+                                        color: #C62E2D;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .none-border {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+        
+        .shopcar {
+            z-index: 9;
+            width: 150px;
+            height: 30px;
+            position: absolute;
+            top: 40px;
+            right: 30px;
+            background: #fff;
+            border: 1px solid #ddd;
+            a {
+                padding: 0 10px;
+                @include cover();
+                font: 16px/30px Arial;
+                text-align: center;
+                color: #666;
+                padding-left: 40px;
+                img {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    left: 5px;
+                    top: 4px;
+                    // display: inline-block;
+                }
+                span {
+                    margin-right: 3px;
+                    font-weight: bold;
+                    color: #C62E2D;
+                    text-align: center;
+                }
+                .jian-left {
+                    color: #999;
+                    font-size: 18px;
+                    margin-left: 5px;
+                }
+            }
+        }
+        
+        .search-list {
+            width: 360px;
+            background: #fff;
+            position: absolute;
+            left: 0px;
+            top: 42px;
+            border: 1px solid #ddd;
+            border-top: 0;
+            list-style: none;
+            li {
+                width: 100%;
+                line-height: 30px;
+                a {
+                    text-decoration: none;
+                    color: #999;
+                    font: 12px/15px 黑体;
+                    margin-left: 8px;
+                    &:hover {
+                        color: #C62E2D;
+                    }
+                }
+            }
+        }

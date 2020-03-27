@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheets/zhuce.css">
+    <script>
+        function foo() {
+
+            if (myform.username.value == "") {
+                alert("请输入用户名");
+                myform.username.focus();
+                return false;
+            }
+            if (myform.password.value == "") {
+                alert("请输入密码");
+                myform.password.focus();
+                return false;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="login-title">
+        <a href="./index.html"><img src="./img/login/logo.png" alt=""></a>
+        <span>欢迎登录</span>
+
+
+    </div>
+    <div class="main-login-back"></div>
+    <div class="back-text"><img src="./img/login/text1.png" alt=""></div>
+    <div class="login-outer">
+        <div class="login-container">
+            <div class="login-nav">
+                <ul class="nav">
+                    <li class="active">账户登录</li>
+
+                    <li>快捷登录</li>
+                </ul>
+                <span>|</span>
+            </div>
+
+
+            <form class="active1" name="myform" action="login.php">
+                <ul>
+                    <li><img class="img1" src="./img/login/用户.svg" alt=""><input type="text" name="username" id="name" placeholder="手机号码" autocomplete="off"></li>
+                    <li><img class="img2" src="./img/login/密码.svg" alt=""><input type="password" name="password" id="pwd" placeholder="密码"></li>
+                    <li class="wang"><a href="">忘记密码</a><a href="./reg.html" class="right">免费注册</a></li>
+                    <li class="submit"><input type="submit" id="button" value="立即登录"></li>
+
+                    <li class="social-group">
+                        <div class="or">or</div>
+                        <a href=""><img src="../myproject/img/login/微信.svg" alt=""></a>
+                        <a href=""><img src="./img/login/QQ.svg" alt=""></a>
+                        <a href=""><img src="./img/login/微博.svg" alt=""></a>
+                    </li>
+                </ul>
+
+            </form>
+            <form action="">
+                <ul>
+                    <li><input type="text" placeholder="请输入手机号"></li>
+                    <li class="yanzheng1"><input type="text" placeholder="图片验证码"><img src="./img/yanzheng.jpg" alt=""></li>
+                    <li class="yanzheng2"><input type="text" placeholder="请输入验证码"><button></button></li>
+                    <li class="submit"><input type="submit" value="立即登录"></li>
+
+                    <li class="social-group">
+                        <div class="or">or</div>
+                        <a href=""><img src="../myproject/img/login/微信.svg" alt=""></a>
+                        <a href=""><img src="./img/login/QQ.svg" alt=""></a>
+                        <a href=""><img src="./img/login/微博.svg" alt=""></a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+    </div>
+    <footer>
+        <div class="foot-text"><span>Copyright © 2015-2019 广州漫游互联电子商务有限责任公司 版权所有</span></div>
+    </footer>
+</body>
+<script>
+    var aul = document.querySelector(".nav");
+    var lis = aul.children;
+    var aform = document.getElementsByTagName('form');
+    console.log(aform);
+    console.log(lis);
+    for (i = 0; i < lis.length; i++) {
+        lis[i].index = i;
+        lis[i].onclick = function() {
+            for (i = 0; i < lis.length; i++) {
+                lis[i].classList.remove('active');
+                aform[i].classList.remove('active1')
+
+            }
+            this.classList.add('active');
+            aform[this.index].classList.add('active1');
+
+        }
+    }
+    var btn = document.querySelector("#button");
+    btn.addEventListener("click", onSubmit)
+    btn.addEventListener("click", foo)
+
+
+
+    var xmlhttp;
+
+    var username, password;
+
+    function loadXMLDoc(url, cfunc, data) {
+        if (window.XMLHttpRequest) { // IE7+, Firefox, Chrome, Opera, Safari 代码
+            xmlhttp = new XMLHttpRequest();
+        } else { // IE6, IE5 代码
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.onreadystatechange = cfunc;
+        xmlhttp.open("POST", url, true);
+
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        xmlhttp.send(data);
+    }
+
+    function onSubmit(ev) {
+        ev.preventDefault();
+        username = document.querySelector("#name").value
+        password = document.querySelector("#pwd").value
+
+        var data = `username=${username}&password=${password}`
+
+        loadXMLDoc("login.php", function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                console.log(xmlhttp.responseText)
+
+                if (xmlhttp.responseText == "1") {
+                    alert('登录成功')
+                    localStorage.setItem("name", xmlhttp.responseText);
+                    location.href = "index.html"
+                } else {
+                    alert('您输入的用户名不存在');
+                    location.href = 'reg.html'
+                }
+
+            }
+        }, data);
+
+
+
+        // fetch('login.php')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         // data就是我们请求的repos
+        //         console.log(data)
+        //     });
+    }
+</script>
+
+
+</html>

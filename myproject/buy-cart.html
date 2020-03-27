@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheets/nosass copy.css">
+    <link rel="stylesheet" href="./stylesheets/screen copy.css">
+    <script src="./js/cart1.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="top-nav">
+            <div class="nav-left">
+                <span>你好,</span>
+                <span>找到中意的书了吗?</span>
+                <a href="./login.html">点击登录</a>
+                <a href="./reg.html">免费注册</a>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="">我的学习</a></li>
+                    <li><a href="">个人中心</a></li>
+                    <li><a href="">我的订单</a></li>
+                    <li class="hover"><a href="" class="hovera">客户服务</a>
+                        <ul>
+                            <li><a href="">帮助中心</a></li>
+                            <li><a href="" class="none-border">新闻中心</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="none-border">手机app</a>
+                        <ul class="erweima">
+                            <li><img src="./img/1.png" alt=""></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="top">
+            <div class="top-left"><img src="./img/logo1.png" alt=""></div>
+            <div class="top-middle">
+                <input type="text" class="search" placeholder="作者名、书名">
+                <button class="btn">搜索</button>
+                <span>热门搜索：今日秒杀&nbsp; 积分兑礼卷&nbsp; 4折粉顶好书</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="cart-container">
+        <div class="shopping-cart-body " style="margin-bottom: 60px;">
+            <div class="shopping-cart-title common-bold-font">
+                全部商品（5）
+            </div>
+            <table class="table table-horizontal center-tex shopping-cart-table">
+                <thead>
+                    <tr class="table-tr-title">
+                        <th width="44">
+                            <input type="checkbox" class="input-checkbox js-batch-select check-all" autocomplete="off">
+                        </th>
+                        <th width="96"><span>全选</span></th>
+                        <th class="left-text item-info" width="415"> <span class="cart-title">商品信息</span> </th>
+                        <th width="220">价格(元)</th>
+                        <th width="175">数量</th>
+                        <th width="135">小计(元)</th>
+                        <th width="98">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="shop-tr
+                                    
+                                    
+                                  " data-id="1">
+                        <td class="check-td">
+                            <span class="dashed-line"></span>
+
+                        </td>
+                        <td class="left-text" colspan="6">
+                            <span class="shop-name-link">漫游书店网上商城自营图书</span>
+                            <div class="dropdown js-dropdown clearfix">
+                                <span class="dropdown-selector">
+                                    <span class="shop-coupon-tag common-promotion-tag">领取优惠券</span>
+                                </span>
+                                <div class="dropdown-content">
+                                    <div class="shop-coupon-list">
+                                        <div class="shop-coupon-item">
+                                            <div class="column-line coupon-item-discount">
+                                                <span class="tailing-text">￥</span>
+                                                <span class="number-text">
+                                                    5.00
+                                                </span>
+                                            </div>
+                                            <div class="column-line coupon-item-info">
+                                                <p class="coupon-item-name cutwords">
+                                                    满￥60.00减￥5.00
+                                                </p>
+                                                <p class="coupon-item-desc cutwords">仅限部分图书商品使用
+                                                </p>
+                                                <p class="coupon-item-date cutwords">2019-07-01 - 2021-01-01</p>
+                                            </div>
+                                            <div class="column-line coupon-item-action">
+                                                <button class="btn btn-info js-get-coupon-btn" data-id="3000105018">领取</button>
+                                            </div>
+                                        </div>
+                                        <div class="shop-coupon-item">
+                                            <div class="column-line coupon-item-discount">
+                                                <span class="tailing-text">￥</span>
+                                                <span class="number-text">
+                                                    10.00
+                                                </span>
+                                            </div>
+                                            <div class="column-line coupon-item-info">
+                                                <p class="coupon-item-name cutwords">
+                                                    满￥100.00减￥10.00
+                                                </p>
+                                                <p class="coupon-item-desc cutwords">仅限部分图书商品使用</p>
+                                                <p class="coupon-item-date cutwords">2019-07-01 - 2020-12-31</p>
+                                            </div>
+                                            <div class="column-line coupon-item-action">
+                                                <button class="btn btn-info js-get-coupon-btn" data-id="3000105019">领取</button>
+                                            </div>
+                                        </div>
+                                        <div class="shop-coupon-item">
+                                            <div class="column-line coupon-item-discount">
+                                                <span class="tailing-text">￥</span>
+                                                <span class="number-text">
+                                                    2.00
+                                                </span>
+                                            </div>
+                                            <div class="column-line coupon-item-info">
+                                                <p class="coupon-item-name cutwords">
+                                                    满￥30.00减￥2.00
+                                                </p>
+                                                <p class="coupon-item-desc cutwords">仅限部分图书商品使用</p>
+                                                <p class="coupon-item-date cutwords">2019-07-01 - 2021-01-01</p>
+                                            </div>
+                                            <div class="column-line coupon-item-action">
+                                                <button class="btn btn-info js-get-coupon-btn" data-id="3000106012">领取</button>
+                                            </div>
+                                        </div>
+                                        <div class="shop-coupon-item">
+                                            <div class="column-line coupon-item-discount">
+                                                <span class="tailing-text">￥</span>
+                                                <span class="number-text">
+                                                    30.00
+                                                </span>
+                                            </div>
+                                            <div class="column-line coupon-item-info">
+                                                <p class="coupon-item-name cutwords">
+                                                    满￥200.00减￥30.00
+                                                </p>
+                                                <p class="coupon-item-desc cutwords">仅限部分图书商品使用
+                                                </p>
+                                                <p class="coupon-item-date cutwords">2019-07-01 - 2021-01-01</p>
+                                            </div>
+                                            <div class="column-line coupon-item-action">
+                                                <button class="btn btn-info js-get-coupon-btn" data-id="3000106014">领取</button>
+                                            </div>
+                                        </div>
+                                        <div class="shop-coupon-item">
+                                            <div class="column-line coupon-item-discount">
+                                                <span class="tailing-text">￥</span>
+                                                <span class="number-text">
+                                                    50.00
+                                                </span>
+                                            </div>
+                                            <div class="column-line coupon-item-info">
+                                                <p class="coupon-item-name cutwords">
+                                                    满￥300.00减￥50.00
+                                                </p>
+                                                <p class="coupon-item-desc cutwords">仅限部分图书商品使用
+                                                </p>
+                                                <p class="coupon-item-date cutwords">2019-07-01 - 2020-12-31</p>
+                                            </div>
+                                            <div class="column-line coupon-item-action">
+                                                <button class="btn btn-info js-get-coupon-btn" data-id="3000106015">领取</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+
+                    <!-- 
+                    -------------------------- -->
+                    <tr>
+                        <td class="check-td">
+                            <span class="dashed-line"></span>
+                            <input type="checkbox" class="input-checkbox js-select-item">
+                        </td>
+                        <td class="left-text item-logo-td">
+                            <div class="item-logo">
+                                <a class="common-image-wrapper" href="javascript:void(0);">
+                                    <img width="78" height="78" src="./img/漫游推荐/1.jpg">
+                                </a>
+                            </div>
+                        </td>
+                        <td class="left-text">
+                            <div class="shop-cart-name">
+                                <div class="item-description">
+                                    <p class="item-desc-name cutwords-two-line" title="鲁滨孙漂流记(儿童彩图注音版)/新课标世界经典文学名著宝库">
+                                        <a href="javascript:void(0);">鲁滨孙漂流记(儿童彩图注音版)/新课标世界经典文学名著宝库</a>
+                                    </p>
+                                    <p class="sku-attrs cutwords">
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="css-price">
+                                ￥<span class="price1">15.96</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-amount group-small" data-min="1" data-max="122">
+                                <a href="javascript:void(0);" class="minus disabled">-</a>
+                                <input type="text" class="count-number " data-old="1" data-init="1" value="1">
+                                <a href="javascript:void(0);" class="plus">+</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="item-subtotal-price common-bold-font">
+                                ￥ <span class="totalprice">15.96</span>
+                                <div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="td-last">
+                            <a href="javascript:void(0);" class="action-item js-delete-item">删除</a><br>
+                            <a href="javascript:void(0);" class="action-item js-collect-item">移到我的收藏</a>
+                        </td>
+                    </tr>
+
+                    <!-- 
+                    -------------------------- -->
+                    <tr>
+                        <td class="check-td">
+                            <span class="dashed-line"></span>
+                            <input type="checkbox" class="input-checkbox js-select-item">
+                        </td>
+                        <td class="left-text item-logo-td">
+                            <div class="item-logo">
+                                <a class="common-image-wrapper" href="javascript:void(0);">
+                                    <img width="78" height="78" src="./img/item-detail-page/new-book/3425290-fm.jpg">
+                                </a>
+                            </div>
+                        </td>
+                        <td class="left-text">
+                            <div class="shop-cart-name">
+                                <div class="item-description">
+                                    <p class="item-desc-name cutwords-two-line" title="上下五千年(上中下最新版)">
+                                        <a href="javascript:void(0);">上下五千年(上中下最新版)</a>
+                                    </p>
+                                    <p class="sku-attrs cutwords">
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="css-price">
+                                ￥<span class="price1">55.16</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-amount group-small" data-min="1" data-max="200">
+                                <a href="javascript:void(0);" class="minus disabled">-</a>
+                                <input type="text" class="count-number " value="1">
+                                <a href="javascript:void(0);" class="plus">+</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="item-subtotal-price common-bold-font">
+                                ￥<span class="totalprice">55.16</span>
+                                <div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="td-last">
+                            <a href="javascript:void(0);" class="action-item js-delete-item">删除</a><br>
+                            <a href="javascript:void(0);" class="action-item js-collect-item">移到我的收藏</a>
+                        </td>
+                    </tr>
+
+                    <!-- 
+                    -------------------------- -->
+                    <tr>
+                        <td class="check-td">
+                            <span class="dashed-line"></span>
+                            <input type="checkbox" class="input-checkbox js-select-item">
+                        </td>
+                        <td class="left-text item-logo-td">
+                            <div class="item-logo">
+                                <a class="common-image-wrapper" href="javascript:void(0);">
+                                    <img width="78" height="78" src="./img/item-detail-page/new-book/3858400-fm.jpg">
+                                </a>
+                            </div>
+                        </td>
+                        <td class="left-text">
+                            <div class="shop-cart-name">
+                                <div class="item-description">
+                                    <p class="item-desc-name cutwords-two-line" title="现代汉语词典(第7版)(精)">
+                                        <a href="javascript:void(0);">现代汉语词典(第7版)(精)</a>
+                                    </p>
+                                    <p class="sku-attrs cutwords">
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="css-price">
+                                ￥<span class="price1">103.55</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-amount group-small" data-min="1" data-max="200">
+                                <a href="javascript:void(0);" class="minus disabled">-</a>
+                                <input type="text" class="count-number " value="1">
+                                <a href="javascript:void(0);" class="plus">+</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="item-subtotal-price common-bold-font">
+                                ￥<span class="totalprice">103.55</span>
+                                <div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="td-last">
+                            <a href="javascript:void(0);" class="action-item js-delete-item">删除</a><br>
+                            <a href="javascript:void(0);" class="action-item js-collect-item">移到我的收藏</a>
+                        </td>
+                    </tr>
+
+
+                    <!-- 
+                    -------------------------- -->
+                    <tr>
+                        <td class="check-td">
+                            <span class="dashed-line"></span>
+                            <input type="checkbox" class="input-checkbox js-select-item">
+                        </td>
+                        <td class="left-text item-logo-td">
+                            <div class="item-logo">
+                                <a class="common-image-wrapper" href="javascript:void(0);">
+                                    <img width="78" height="78" src="./img/item-detail-page/new-book/3873901-fm.jpg">
+                                </a>
+                            </div>
+                        </td>
+                        <td class="left-text">
+                            <div class="shop-cart-name">
+                                <div class="item-description">
+                                    <p class="item-desc-name cutwords-two-line" title="我的第一本地理启蒙书">
+                                        <a href="javascript:void(0);">我的第一本地理启蒙书</a>
+                                    </p>
+                                    <p class="sku-attrs cutwords">
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="css-price">
+                                ￥<span class="price1">47.31</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-amount group-small" data-min="1" data-max="200">
+                                <a href="javascript:void(0);" class="minus disabled">-</a>
+                                <input type="text" class="count-number " value="1">
+                                <a href="javascript:void(0);" class="plus">+</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="item-subtotal-price common-bold-font">
+                                ￥<span class="totalprice">47.31</span>
+                                <div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="td-last">
+                            <a href="javascript:void(0);" class="action-item js-delete-item">删除</a><br>
+                            <a href="javascript:void(0);" class="action-item js-collect-item">移到我的收藏</a>
+                        </td>
+                    </tr>
+
+                    <!-- 
+                    -------------------------- -->
+                    <tr>
+                        <td class="check-td">
+                            <span class="dashed-line"></span>
+                            <input type="checkbox" class="input-checkbox js-select-item">
+                        </td>
+                        <td class="left-text item-logo-td">
+                            <div class="item-logo">
+                                <a class="common-image-wrapper" href="javascript:void(0);">
+                                    <img width="78" height="78" src="./img/item-detail-page/new-book/3916619-fm.jpg">
+                                </a>
+                            </div>
+                        </td>
+                        <td class="left-text">
+                            <div class="shop-cart-name">
+                                <div class="item-description">
+                                    <p class="item-desc-name cutwords-two-line" title="活着/余华作品">
+                                        <a href="javascript:void(0);">活着/余华作品</a>
+                                    </p>
+                                    <p class="sku-attrs cutwords">
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="css-price">
+                                ￥<span class="price1">26.60</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-amount group-small" data-min="1" data-max="200">
+                                <a href="javascript:void(0);" class="minus disabled">-</a>
+                                <input type="text" class="count-number " value="1">
+                                <a href="javascript:void(0);" class="plus">+</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="item-subtotal-price common-bold-font">
+                                ￥<span class="totalprice">26.60</span>
+                                <div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="td-last">
+                            <a href="javascript:void(0);" class="action-item js-delete-item">删除</a><br>
+                            <a href="javascript:void(0);" class="action-item js-collect-item">移到我的收藏</a>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+        <div class="foot-container">
+            <div class="foot-left">
+                <label for="select-batch">
+                    <input type="checkbox" class="input-checkbox js-batch-select check-all">
+                    <span>全选</span>
+                </label>
+                <a href="javascript:void(0);" class="delete-batch">批量删除</a>
+                <a href="javascript:void(0);" class="collect-batch">移到我的收藏</a>
+            </div>
+            <div class="foot-right">
+                <span class="total-item">
+                    已选<span id="selectedTotal">0</span>件商品
+                </span>
+                <div class="total-price-info">
+                    <div class="total-price">
+                        <span class="price-label">合计（不含运费）</span>
+                        <span class="price-text">
+                            <span>￥</span>
+                        <span id="priceTotal">0.00</span>
+                        </span>
+                    </div>
+                    <div class="discount-price">
+                        <span class="price-label">
+                            已节省
+                        </span>
+                        <span class="price-text">
+                            <span>￥</span>
+                        <span>0.00</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="submit-btn"><button>
+                        去结算
+                    </button></div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="foot">
+            <div class="foot-top">
+                <ul>
+                    <li>
+                        <h3>新书活动，常有常新</h3>
+                    </li>
+                    <li>
+                        <h3>正版图书，华丽生活</h3>
+                    </li>
+                    <li>
+                        <h3>专业全面，轻松找书</h3>
+                    </li>
+                    <li>
+                        <h3>12000+门店服务</h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="foot-middle">
+                <ul>
+                    <li>
+                        <span>购物指南</span>
+                        <a href="">购物保障</a>
+                        <a href="">购物流程</a>
+                        <a href="">联系客服</a>
+                        <a href="">促销说明</a>
+                    </li>
+                    <li>
+                        <span>支付方式</span>
+                        <a href="">网上支付</a>
+                        <a href="">优惠券支付</a>
+                        <a href="">扫码付款</a>
+                    </li>
+                    <li>
+                        <span>配送方式</span>
+                        <a href="">配送运费</a>
+                        <a href="">商品验收</a>
+                        <a href="">订单说明</a>
+                    </li>
+                    <li>
+                        <span>售后服务</span>
+                        <a href="">退换货制度</a>
+                        <a href="">申请退还货</a>
+                        <a href="">退款时效</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="foot-bottom">
+                <ul>
+                    <li><span><a href="">京公网安备 110110202007572|京ICP证 京B2-20171652号</a></span></li>
+                    <li><span><a href="">出版物经营许可证 新出发 京零字第西160071 | 广播电视节目制作经营许可证 （京）字第07439号</a></span></li>
+                    <li><span><a href="">营业执照|网络出版服务许可证（京）字第320号</a></span></li>
+                    <li><span><a href="">Copyringht 2015-2019 漫游互联电子商务有限责任公司 版权所有</a></span></li>
+                    <li><span><a href="">消费者维权热线：4006666505</a></span></li>
+                    <li><span>网络警察提示您</span><span>中国互联网举报中心</span><span>网络举报下载</span></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./js/count-down.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheets/zhuce.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="navbar-left">
+                <span>你好，找到中意的书了吗？</span>
+                <a href="./login.html">点击登录</a>
+                <a href="./reg.html">免费注册</a>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="">我的学习</a></li>
+                    <li><a href="">个人中心</a></li>
+                    <li><a href="">我的订单</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <div class="logo">
+        <img src="./img/2.png" alt="">
+        <span> <a href="./index.html" style="text-decoration: none;">漫游书店</a> </span>
+    </div>
+    <div class="forms">
+
+        <form id="register-form" class="form" novalidate="true" action="reg.php" method="post" name="myform" onsubmit=" return checkinput()">
+
+            <fieldset>
+
+                <div class="control-group">
+                    <label for="mobile"><span class="required">*</span>手机号码:</label>
+                    <input id="mobile-phone" type="number" name="phone_number" placeholder="您的手机号码" autocomplete="off">
+                    <span class="error1" id="phone-error">你输入的手机号格式错误</span>
+
+                </div>
+                <div class="control-group">
+                    <label for="verify-code"><span class="required">*</span>图片验证码:</label>
+                    <input id="verify-code" type="text" placeholder="图片验证码" maxlength="4" required="">
+                    <img src="./img/yanzheng.jpg" class="verify-code js-verify-code" alt="看不清楚？点击重新获取验证码">
+                    <span class="error1" id="verify-error">验证码错误</span>
+                </div>
+                <div class="control-group">
+                    <label for="verification-code"><span class="required">*</span>短信验证码:</label>
+
+                    <button type="button" class="get-code">获取验证码</button>
+                    <input id="verification-code" type="text" placeholder="短信验证码" name="verification_code" autocomplete="off">
+                </div>
+                <div class="control-group shezhi">
+                    <label for="password"><span class="required">*</span>设置密码:</label>
+                    <input id="password" type="password" name="password" placeholder="您的密码" maxlength="20" required="" autocomplete="new-password">
+
+
+                </div>
+                <div class="setpassword-group">
+
+                    <ul class="password-level">
+                        <li class="level-weak">
+                            <div class="weak-bar"><span>弱</span></div>
+                        </li>
+                        <li class="level-middle">
+                            <div class="middle-bar"><span>中</span></div>
+                        </li>
+                        <li class="level-strong">
+                            <div class="strong-bar"><span>强</span></div>
+                        </li>
+                    </ul>
+                    <span class="error1" id="password-error">密码为空或格式错误</span>
+                </div>
+                <div class="control-group">
+                    <label id="confirm" for="password"><span class="required">*</span>确认密码:</label>
+                    <input id="confirm-password" type="password" name="confirm" placeholder="再次确认您的密码">
+                    <span class="error1" id="confirm-error">两次输入的密码不一致</span>
+
+                </div>
+                <div class="controls">
+                    <label>
+                          <input id="protocol-checked" type="checkbox" class="input-checkbox"> 我已阅读并同意<a href="javascript:void(0);" >《用户注册协议》</a>
+                        </label>
+                    <span class="error1" id="checked-error">请勾选协议</span>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <input type="submit" class="btn-large" value="立即注册">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+    </div>
+    <script>
+        let a1 = a2 = a3 = a4 = a5 = a6 = false;
+        var weak = document.getElementsByClassName('weak-bar')[0];
+        var middle = document.getElementsByClassName('middle-bar')[0];
+        var strong = document.getElementsByClassName('strong-bar')[0];
+        var apassword = document.getElementById("password");
+        var bpassword = document.getElementById("confirm-password");
+        var achecked = document.getElementById("protocol-checked");
+        var submits = document.getElementsByClassName('btn-large')[0];
+        var errors = document.getElementsByClassName('error1');
+
+        var arr = [weak, middle, strong];
+
+
+        console.log(errors);
+
+        document.getElementById("mobile-phone").onchange = function() {
+            var reg = /^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
+            var phone = reg.test(this.value);
+            if (phone && this.value != "") {
+                a1 = true;
+                errors[0].style.display = 'none';
+
+
+
+            } else {
+                errors[0].style.display = 'block';
+                this.focus();
+
+                return false;
+
+
+
+            }
+        }
+        document.getElementById("verify-code").onchange = function() {
+
+
+            if (this.value == "oqir" && this.value != "") {
+                a2 = true;
+                errors[1].style.display = 'none';
+
+            } else {
+                errors[1].style.display = 'block';
+                this.focus();
+
+                return false;
+            }
+        }
+        document.getElementById("verification-code").onchange = function() {
+
+
+            if (this.value != "") {
+                a3 = true;
+
+
+            } else {
+                alert("该信息不能为空");
+                this.focus();
+                return false;
+            }
+        }
+        apassword.onchange = function() {
+            // 弱密码，长度6-17，纯数字
+            var reg1 = /^\d{6,17}$/;
+            var weaks = reg1.test(this.value);
+            // 中密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线
+            var reg2 = /^[a-zA-Z]\w{5,17}$/;
+            var middle = reg2.test(this.value);
+            // 强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在6-17之间)
+            var reg3 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,17}$/;
+            var strong = reg3.test(this.value);
+            if (weaks && this.value != "") {
+                for (var i = 0; i < arr.length; i++) arr[i].classList.remove('active');
+                arr[0].classList.add('active');
+                a4 = true;
+                errors[2].style.display = 'none';
+
+
+
+            } else if (middle) {
+                for (var i = 0; i < arr.length; i++) arr[i].classList.remove('active');
+                arr[1].classList.add('active');
+                console.log(2)
+            } else if (strong) {
+                for (var i = 0; i < arr.length; i++) arr[i].classList.remove('active');
+                arr[2].classList.add('active');
+                console.log(3)
+            } else {
+                errors[2].style.display = 'block';
+                this.focus();
+                return false;
+            }
+        }
+        bpassword.onchange = function() {
+
+            if (apassword.value == bpassword.value && this.value != "") {
+                a5 = true;
+                errors[3].style.display = 'none';
+
+            } else {
+                errors[3].style.display = 'block';
+                this.focus();
+                return false;
+            }
+        }
+        achecked.onchange = function() {
+                if (achecked.checked = 'checked') {
+                    a6 = true;
+
+                    errors[4].style.display = 'none';
+                } else {
+                    errors[4].style.display = 'block';
+
+                    return false;
+                }
+            }
+            // var funcM = function() {
+            //         var xmlhttp;
+
+        //         var username, password;
+
+        //         function loadXMLDoc(url, cfunc, data) {
+        //             if (window.XMLHttpRequest) { // IE7+, Firefox, Chrome, Opera, Safari 代码
+        //                 xmlhttp = new XMLHttpRequest();
+        //             } else { // IE6, IE5 代码
+        //                 xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        //             }
+
+        //             xmlhttp.onreadystatechange = cfunc;
+        //             xmlhttp.open("POST", url, true);
+
+        //             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        //             xmlhttp.send(data);
+        //         }
+
+        //         function onSubmit(ev) {
+        //             ev.preventDefault();
+        //             mobilephone = document.querySelector("#mobile-phone").value
+
+        //             pwd = apassword.value
+
+
+        //             var data = `mobilephone=${mobilephone}&pwd=${pwd}`
+
+        //             loadXMLDoc("reg.php", function() {
+        //                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        //                     // localStorage.setItem("name", xmlhttp.responseText);
+        //                     // location.href = "index.html"
+        //                     console.log(xmlhttp.responseText);
+        //                 }
+        //             }, data);
+
+
+
+        //             // fetch('login.php')
+        //             //     .then(response => response.json())
+        //             //     .then(data => {
+        //             //         // data就是我们请求的repos
+        //             //         console.log(data)
+        //             //     });
+        //         }
+        //     }
+        //     //     fetch('login.php')
+        //     //         .then(response => response.json())
+        //     //         .then(data => {
+        //     //             // data就是我们请求的repos
+        //     //             console.log(data)
+        //     //         });
+        //     // }
+
+        // var subfn = function(ev) {
+
+
+        //     var xhr = new XMLHttpRequest();
+        //     console.dir(xhr)
+
+        //     // 请求   请求行 请求头 请求主体
+        //     xhr.open("post", "./reg.php")
+
+        //     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        //     mobilephone = document.querySelector("#mobile-phone").value
+
+        //     pwd = apassword.value
+        //     var data = `mobilephone=${mobilephone}&pwd=${pwd}`
+
+        //     xhr.send(data)
+
+
+        //     // js 回调事件做异步
+
+        //     // 响应 状态行 响应头 响应主体
+
+
+        //     xhr.onreadystatechange = function() {
+        //         //状态行
+        //         if (xhr.readyState == 4 && xhr.status == 200) {
+        //             //响应头
+
+        //             // console.log(xhr.getResponseHeader("Content-type"))
+        //             // console.log()
+        //             // console.log(xhr.responseXML)
+        //             // var obj = JSON.parse(xhr.responseText)
+
+        //             // console.log(obj)
+        //             document.innerHTML += xhr.responseText
+
+
+
+
+        //         }
+
+
+        //     }
+
+        // }
+        // submits.onclick = function() {
+        //         if (a1 && a2 && a3 && a4 && a5 && a6) {
+        //             subfn();
+        //         } else {
+        //             alert("请填写注册信息");
+
+
+        //         }
+        //     }
+        function checkinput() {
+            if (myform.phone_number.value == "") {
+                alert("请输入手机号");
+                myform.phone_number.focus();
+                return false;
+            }
+            if (myform.password.value == "") {
+                alert("请输入密码");
+                myform.password.focus();
+                return false;
+            }
+
+            if (myform.password.value != myform.confirm.value) {
+                alert("你输入的两次密码不一致，请重新输入！");
+                myform.password.focus();
+                return false;
+            }
+
+            if (myform.verification_code.value == "") {
+                alert("请输入验证码");
+                myform.verification_code.focus();
+                return false;
+            }
+            if (achecked.checked == "") {
+                alert("请勾选协议");
+
+                return false;
+            }
+        }
+
+        // }
+        // fetch('login.php')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         // data就是我们请求的repos
+        //         console.log(data)
+        //     });
+    </script>
+</body>
+
+</html>

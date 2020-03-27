@@ -1,0 +1,462 @@
+ a {
+     text-decoration: none;
+ }
+ 
+ .container {
+     margin: 0 auto;
+     width: 1200px;
+     position: relative;
+ }
+ 
+ .top {
+     width: 100%;
+     height: 198px;
+ }
+ 
+ .top-left {
+     float: left;
+     position: absolute;
+     width: 230px;
+     left: -30px;
+     top: 15px;
+     display: block;
+ }
+ 
+ .top-left img {
+     width: 100%;
+ }
+ 
+ .top-middle {
+     position: absolute;
+     width: 460px;
+     height: 60px;
+     left: 370px;
+     top: 51px;
+ }
+ 
+ .search {
+     box-sizing: border-box;
+     width: 360px;
+     height: 42px;
+     color: #999;
+     font-size: 1em;
+     border: 2px solid rgb(53, 130, 255);
+     border-radius: 10px 0 0 10px;
+     vertical-align: top;
+ }
+ 
+ .btn {
+     box-sizing: border-box;
+     width: 95px;
+     height: 42px;
+     border: 2px solid rgb(53, 130, 255);
+     color: white;
+     background: rgb(53, 130, 255);
+     font-size: 1em;
+     font-weight: bold;
+     margin-left: -6px;
+     border-radius: 0 21px 21px 0;
+ }
+ 
+ .btn:hover {
+     background: #1c68e2;
+ }
+ 
+ .top-middle span {
+     font-size: 12px;
+     text-indent: 0.01px;
+     box-sizing: border-box;
+     color: #999;
+ }
+ 
+ .shop-list {
+     transition: color 0.2s;
+     font-family: 微软雅黑;
+     font-size: 16px;
+     font-weight: 300;
+     font-style: normal;
+     letter-spacing: 0px;
+     border-radius: 0px;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .bao {
+     position: absolute;
+     width: 192px;
+     height: 50px;
+     left: 0px;
+     top: 148px;
+     transform: rotate(0deg);
+     cursor: pointer;
+     background: rgba(24, 127, 177, 1);
+     color: white;
+     font-weight: bold;
+     font-family: 微软雅黑;
+     font-size: 16px;
+     z-index: 999;
+ }
+ 
+ .bao:hover .book-list {
+     height: 490px;
+     transition: all 0.5s;
+ }
+ 
+ .shop-list p {
+     display: inline;
+ }
+ 
+ .shop-list span {
+     white-space: nowrap;
+     display: inline-block;
+ }
+ 
+ .list-context {
+     position: absolute;
+     width: 880px;
+     height: 48px;
+     left: 206px;
+     top: 148px;
+     background: rgba(246, 248, 241, 0.3);
+ }
+ 
+ .list-context ul {
+     list-style: none;
+     width: 100%;
+     height: 100%;
+ }
+ 
+ .list-context ul li {
+     float: left;
+     width: 136px;
+     height: 100%;
+     text-align: center;
+     background: rgba(246, 248, 241, 0.3);
+ }
+ 
+ .list-context ul .xiao {
+     width: 108px;
+     /* border-bottom: 5px solid blue; */
+     /* background: linear-gradient( rgba(246, 248, 241, 0.3) 87%, #3582ff 91%); */
+ }
+ /* .list-context ul .xiao a {
+            border-bottom: 5px solid blue;
+        } */
+ 
+ .list-context ul li a {
+     line-height: 48px;
+     width: 80%;
+     height: 100%;
+     text-decoration: none;
+     color: rgb(67, 67, 67);
+     font-size: 18px;
+     text-align: center;
+     display: inline-block;
+ }
+ 
+ .list-context ul li a:hover {
+     color: rgb(150, 47, 44)
+ }
+ 
+ .hot {
+     position: absolute;
+     top: 560px;
+     left: 0;
+     width: 100%;
+     height: 40px;
+     border-bottom: 2px solid #3582ff;
+ }
+ 
+ .hot .head {
+     height: 60px;
+     width: 300px;
+     margin-bottom: 10px;
+ }
+ 
+ .hot .head img {
+     height: 35px;
+ }
+ 
+ .hot .head span {
+     color: #3582ff;
+     font: bold 2em/40px 黑体;
+ }
+ 
+ .hot1 {
+     position: absolute;
+     top: 1500px;
+     left: 0;
+     width: 100%;
+     height: 40px;
+     border-bottom: 2px solid #3582ff;
+ }
+ 
+ .hot1 .head {
+     height: 60px;
+     width: 300px;
+     margin-bottom: 10px;
+ }
+ 
+ .hot1 .head img {
+     height: 35px;
+ }
+ 
+ .hot1 .head span {
+     color: #3582ff;
+     font: bold 2em/40px 黑体;
+ }
+ 
+ .books {
+     position: absolute;
+     top: 660px;
+     left: 0;
+     height: 820px;
+     width: 100%;
+ }
+ 
+ .books ul {
+     list-style: none;
+     width: 100%;
+     height: 760px;
+ }
+ 
+ .books ul li {
+     width: 300px;
+     height: 380px;
+     float: left;
+ }
+ 
+ .books ul li a {
+     width: 100%;
+     height: 100%;
+     cursor: pointer;
+ }
+ 
+ .books ul li a img {
+     width: 284px;
+     height: 278px;
+     margin: 0 auto;
+ }
+ 
+ .texts span {
+     color: #999;
+     font: bold 16px/20px 黑体;
+ }
+ 
+ .texts a {
+     color: red;
+     font: bold 2em/35px 黑体;
+     text-decoration: none;
+ }
+ 
+ .texts {
+     width: 100px;
+     height: 60px;
+     margin-left: 40px;
+ }
+ 
+ .books1 {
+     position: absolute;
+     top: 1580px;
+     width: 100%;
+ }
+ 
+ .books1 ul {
+     list-style: none;
+     width: 100%;
+     height: 760px;
+ }
+ 
+ .books1 ul li {
+     width: 300px;
+     height: 380px;
+     float: left;
+ }
+ 
+ .books1 ul li a {
+     width: 100%;
+     height: 100%;
+     cursor: pointer;
+ }
+ 
+ .books1 ul li a img {
+     width: 284px;
+     height: 278px;
+     margin: 0 auto;
+ }
+ 
+ .texts1 .a1 {
+     color: #999;
+     font: bold 16px/20px 黑体;
+     display: block;
+     height: 20px;
+ }
+ 
+ .texts1 a {
+     color: red;
+     font: bold 2em/35px 黑体;
+     text-decoration: none;
+ }
+ 
+ .texts1 {
+     width: 200px;
+     height: 60px;
+     margin-left: 40px;
+ }
+ 
+ .page {
+     width: 800px;
+     height: 40px;
+     position: absolute;
+     top: 1410px;
+     margin-left: -400px;
+     left: 50%;
+     text-align: center;
+ }
+ 
+ .page .last-page {
+     height: 20px;
+     border: 1px solid #999;
+     background: #eee;
+     color: #666;
+     font: 1px/20px 黑体;
+     display: inline-block;
+     width: 50px;
+     text-align: center;
+ }
+ 
+ .page .next-page {
+     height: 20px;
+     border: 1px solid #999;
+     background: #eee;
+     color: #666;
+     font: 1px/20px 黑体;
+     display: inline-block;
+     width: 50px;
+     text-align: center;
+ }
+ 
+ .page .sp1 {
+     display: inline-block;
+     width: 20px;
+     height: 20px;
+     color: white;
+     font: 1em/20px 黑体;
+     text-align: center;
+     background: red;
+     border-radius: 5px;
+     border: 1px solid red;
+     margin: 1px 2px 0;
+ }
+ 
+ .page .all {
+     font: 1em/20px 黑体;
+     color: #999;
+     height: 22px;
+     width: 50px;
+ }
+ 
+ .page span {
+     font: 1em/20px 黑体;
+     color: #999;
+     display: inline-block;
+     width: 150px;
+     height: 20px;
+ }
+ 
+ .page .text3 {
+     width: 30px;
+     height: 20px;
+     border: 1px solid #eee;
+     border-radius: 5px;
+ }
+ 
+ .page .button3 {
+     width: 40px;
+     height: 22px;
+     font: 14px/22px 黑体;
+     color: #999;
+     background: white;
+     border: 1px solid #eee;
+     border-radius: 3px;
+ }
+ 
+ .page1 {
+     width: 800px;
+     height: 40px;
+     position: absolute;
+     top: 2320px;
+     margin-left: -400px;
+     left: 50%;
+     text-align: center;
+ }
+ 
+ .page1 .last-page {
+     height: 20px;
+     border: 1px solid #999;
+     background: #eee;
+     color: #666;
+     font: 1px/20px 黑体;
+     display: inline-block;
+     width: 50px;
+     text-align: center;
+ }
+ 
+ .page1 .next-page {
+     height: 20px;
+     border: 1px solid #999;
+     background: #eee;
+     color: #666;
+     font: 1px/20px 黑体;
+     display: inline-block;
+     width: 50px;
+     text-align: center;
+ }
+ 
+ .page1 .sp1 {
+     display: inline-block;
+     width: 20px;
+     height: 20px;
+     color: white;
+     font: 1em/20px 黑体;
+     text-align: center;
+     background: red;
+     border-radius: 5px;
+     border: 1px solid red;
+     margin: 1px 2px 0;
+ }
+ 
+ .page1 .all {
+     font: 1em/20px 黑体;
+     color: #999;
+     height: 22px;
+     width: 50px;
+ }
+ 
+ .page1 span {
+     font: 1em/20px 黑体;
+     color: #999;
+     display: inline-block;
+     width: 150px;
+     height: 20px;
+ }
+ 
+ .page1 .text3 {
+     width: 30px;
+     height: 20px;
+     border: 1px solid #eee;
+     border-radius: 5px;
+ }
+ 
+ .page1 .button3 {
+     width: 40px;
+     height: 22px;
+     font: 14px/22px 黑体;
+     color: #999;
+     background: white;
+     border: 1px solid #eee;
+     border-radius: 3px;
+ }
